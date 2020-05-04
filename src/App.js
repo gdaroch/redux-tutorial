@@ -3,14 +3,23 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 
 import DashboardPage from './pages/DashboardPage';
 import PostsPage from './pages/PostsPage';
+import SinglePostPage from './pages/SinglePostPage';
+import { Navbar } from './components/Navbar';
 
 const App = () => {
+
+  const handleClick = () => {
+    console.log();
+
+  }
+
   return (
     <Router>
+      <Navbar />
       <Switch>
         <Route exact path="/" component={DashboardPage} />
         <Route exact path="/posts" component={PostsPage} />
-        <Redirect to="/" />
+        <Route exact path="/posts/:id" component={SinglePostPage} />
       </Switch>
     </Router>
   )
