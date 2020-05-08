@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import DashboardPage from './pages/DashboardPage';
 import PostsPage from './pages/PostsPage';
@@ -7,12 +7,6 @@ import SinglePostPage from './pages/SinglePostPage';
 import { Navbar } from './components/Navbar';
 
 const App = () => {
-
-  const handleClick = () => {
-    console.log();
-
-  }
-
   return (
     <Router>
       <Navbar />
